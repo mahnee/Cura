@@ -599,6 +599,9 @@ class SceneView(openglGui.glGuiPanel):
 						obj._loadAnim = openglGui.animation(self, 1, 0, 1.5)
 					else:
 						obj._loadAnim = None
+					# added by mahnee
+					obj.setScale(profile.getProfileSettingFloat('default_scale'), 0, True)
+					#---------------
 					self._scene.add(obj)
 					if not self._scene.checkPlatform(obj):
 						self._scene.centerAll()
